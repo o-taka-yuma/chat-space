@@ -2,31 +2,30 @@
 
 |Column|Type|Options|
 |:--------:|:-------:|:-----------:|
-|Name|string|null :false|
-|Email|string|unique :true|
-|Password|integer|unique :true|
-|Password_confirmation|integer|null :false|
-|message_id|integer||
+|name|string|null :false|
+|email|string|unique :true|
+|password|integer|unique :true|
+|password_confirmation|integer|null :false|
 
 ### Association
 - has_many:messages
-- has_many:users_group
-- has_many:groups, through: :user_group
+- has_many:users_groups
+- has_many:groups, through: :user_groups
 
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |:--------:|:-------:|:-----------:|
-|group_name|string|null :false|
+|name|string|null :false|
 
 ### Association
-- has_many:user_group
-- has_many:user, through: :user_group
+- has_many:user_groups
+- has_many:user, through: :user_groups
 - has_many:messages
 
 
-## user_groupテーブル
+## user_groupsテーブル
 
 |Column|Type|Options|
 |:--------:|:-------:|:-----------:|
@@ -40,7 +39,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |:--------:|:-------:|:-----------:|
-|text|text|null :false|
+|text|text||
 |user_id|integer|null:false, foregin_key :true|
 |group_id|integer|null:false, foregin_key :true|
 |image|string||
