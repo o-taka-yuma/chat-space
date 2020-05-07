@@ -9,7 +9,7 @@
 
 ### Association
 - has_many:messages
-- has_many:users_groups
+- has_many:user_groups
 - has_many:groups, through: :user_groups
 
 
@@ -21,7 +21,7 @@
 
 ### Association
 - has_many:user_groups
-- has_many:user, through: :user_groups
+- has_many:users, through: :user_groups
 - has_many:messages
 
 
