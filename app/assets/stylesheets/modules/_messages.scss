@@ -12,6 +12,27 @@
     .side-bar__user-name {
       height: 100px;
       background-color: #253141;
+      display: flex;
+      align-items: center;
+      .top-items {
+        height: 20px;
+        width: 260px;
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        .top-items__icon {
+          height: 20px;
+          width: 60px;
+          text-align: right;
+          .top-items__icon--btn {
+            color: #ffffff;
+            text-decoration: none;
+          }
+          .top-items__edit--btn {
+            color: #ffffff;
+          }
+        }
+      }
     }
     .side-bar__group-list {
       height: calc(100% - 100px);
