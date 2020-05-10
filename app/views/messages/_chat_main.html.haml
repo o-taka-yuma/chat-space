@@ -1,0 +1,34 @@
+.chat-main
+  .chat-main__group
+    .group-box
+      %h1.group-box__group-name test
+      %p.group-box__user-name Member : name
+    .edit-box
+      = link_to "#", class: "edit-box--btn" do
+        %p Edit
+
+  .chat-main__message-list
+    .chat-main__message
+      .chat-main__message__date-box
+        %h2.chat-main__message__user-name masa
+        %p.chat-main__message__time 2019/04/21/(web)10:33:19
+      %p.chat-main__message__comment おはよう
+      
+    .chat-main__message
+      .chat-main__message__datebox
+        %h2.chat-main__message__user-name masa
+        %p.chat-main__message__time 2019/04/21/(web)07:23:54
+      %p.chat-main__message__comment 今日も雨
+
+  .chat-main__message-form
+    %div.chat-main__message__from-comment
+      .from
+        .commentbox
+          %input.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label{class: "input-box__image"}
+            = icon('far', 'image')
+            %input{class: "input-box__image-file", type: "file"}
+            
+        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+        
