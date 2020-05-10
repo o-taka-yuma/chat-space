@@ -8,6 +8,7 @@ $w:#ffffff;
   height: 100vh;
   width: 100%;
   display: flex;
+  
   .side-bar {
     background-color: #253141;
     height: 100%;
@@ -140,7 +141,7 @@ $w:#ffffff;
     }
   }
 
-
+    //--------------------------------------------   
     .chat-main__message-form {
       height: 90px;
       background-color: #dddddd;
