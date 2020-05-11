@@ -23,12 +23,10 @@
   .chat-main__message-form
     %div.chat-main__message__from-comment
       .from
-        .commentbox
-          %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-          %label{class: "input-box__image"}
-            = icon('far', 'image')
-            %input{class: "input-box__image-file", type: "file"}
-            
-        %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
-
-        
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'input-box__text',  placeholder: "type a message",
+          .commentbox
+            = f.label :image, class: 'input-box__image' do
+              = icon('far', 'image', class: 'icon')
+              = f.file_field :imaage, class: 'input-box__image-file'
+          = f.submit 'Send', class: 'submit-btn'
