@@ -50,16 +50,23 @@ $w:#ffffff;
       height: calc(100% - 100px);
       background-color: #2f3e51;
       padding: 20px 20px 5px ;
-
-      .group-name {
-        font-size: 15px;
-        color: $w;
+      a {
+        text-decoration: none;
+      }
+      .group {
+        margin-bottom: 40px;
+        .group-name {
+          font-size: 15px;
+          color: $w;
+        }
+        .group-messages {
+          font-size: 11px;
+          color: $w;
+        }
+        
       }
 
-      .group-messages {
-        font-size: 11px;
-        color: $w;
-      }
+      
     }
   }
      //--------------------------------------------   
