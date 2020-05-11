@@ -1,0 +1,16 @@
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        %a name
+      .top-items__icon
+        = link_to "#", class: "icon--btn" do
+          = icon('far', 'edit')
+        = link_to "#", class: "edit--btn" do
+          = icon('fas', 'cog')
+  .side-bar__group-list
+    .group
+      .group-name
+        %h techcamp
+      .group-messages
+        %a comments
