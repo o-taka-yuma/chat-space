@@ -12,7 +12,7 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to "#" do
           .group-name
             = group.name 
           .group-messages
