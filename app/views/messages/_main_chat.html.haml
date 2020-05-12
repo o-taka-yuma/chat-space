@@ -8,9 +8,9 @@
         - @group.users.each do |user|
           .users 
             = user.name
-            
+
     .edit-box
-      = link_to "#", class: "edit-box--btn" do
+      = link_to edit_group_path(@group), class: "edit-box--btn"do
         %p Edit
 
   .chat-main__message-list
