@@ -11,8 +11,8 @@ $w:#ffffff;
   
   .side-bar {
     background-color: #253141;
-    height: 100%;
     width: 300px;
+    float: left;
 
     &__user-name {
       height: 100px;
@@ -72,15 +72,15 @@ $w:#ffffff;
      //--------------------------------------------   
   .chat-main {
     background-color: $w;
-    height: 100%;
     width: calc(100vw - 300px);
-
+    float: left;
     &__group {
       height: 100px;
       background-color: $w;
       border-bottom: #eeeeee solid 1px;
       display: flex;
       justify-content: space-between;
+      overflow: scroll;
 
       .group-box {
         color: #333333;
@@ -123,6 +123,7 @@ $w:#ffffff;
     .chat-main__message-list {
       height: calc(100% - 190px);
       background-color: #fafafa;
+      overflow: scroll;
 
       .chat-main__message {
         padding: 46px 40px;
