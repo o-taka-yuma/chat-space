@@ -96,6 +96,10 @@ $w:#ffffff;
           font-size: 12px;
           color: #999999;
           padding-top: 15px;
+          display: flex;
+          .users {
+            margin-left: 5px;
+          }
         }
       }
       .edit-box {
@@ -122,18 +126,18 @@ $w:#ffffff;
 
       .chat-main__message {
         padding: 46px 40px;
-        &__date-box {
+        .chat-main__message__date-box {
           display: flex;
           padding-bottom: 12px;
 
-          &__user-name {
-            color: #333333;
-            font-size: 16px;
-            font-weight: bold;
-            margin-right: 5px;
-          }
+        .chat-main__message__user-name {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 5px;
+        }
 
-          &__time {
+          .chat-main__message__time {
             color: #999999;
             font-size: 12px;
           }
@@ -156,31 +160,30 @@ $w:#ffffff;
 
       div.chat-main__message__from-comment {
         .from {
-          display: flex;
-
-          .commentbox {
-            position: relative;
-            width: 100%;
-
+          .new_message {
+            display: flex;
             .input-box__text {
               height: 50px;
               width: 100%;
               padding: 0 40px 0 10px;
               color: #434a54;
               border-style: none;
+          }
+            .commentbox {
+              position: relative;
             }
             
-            .input-box__image {
-              font-size: 1.3rem;
-              position: absolute;
-              top: 10px;
-              right: 10px;
               
-              .input-box__image-file {
-                display: none;
+              .input-box__image {
+                font-size: 1.3rem;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                .input-box__image-file {
+                  display: none;
+                }
               }
-            }
-
+            
           }
           .submit-btn {
             width: 100px;
