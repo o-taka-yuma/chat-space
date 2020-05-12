@@ -1,8 +1,14 @@
 .chat-main
   .chat-main__group
     .group-box
-      %h1.group-box__group-name test
-      %p.group-box__user-name Member : name
+      .group-box__group-name
+        = @group.name
+      .group-box__user-name
+        %a.m Member
+        - @group.users.each do |user|
+          .users 
+            = user.name
+            
     .edit-box
       = link_to "#", class: "edit-box--btn" do
         %p Edit
@@ -16,6 +22,6 @@
           = f.text_field :content, class: 'input-box__text',  placeholder: "type a message"
           .commentbox
             = f.label :image, class: 'input-box__image' do
-              = icon('far', 'image', class: 'icon')
-              = f.file_field :imaage, class: 'input-box__image-file'
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'input-box__image-file'
           = f.submit 'Send', class: 'submit-btn'
