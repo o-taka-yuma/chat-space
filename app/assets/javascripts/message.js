@@ -20,7 +20,6 @@ $(function(){
               </img>
            
           </div>`
-        return html;
       }else{
         var html = 
           `<div class="chat-main__message">
@@ -38,9 +37,9 @@ $(function(){
                 </p>
               </div>
           </div>`
-        return html;
-      };
-    }
+      }
+      return html;
+    };
   $('#new_message').on('submit', function(e){
     e.preventDefault()
     var formData = new FormData(this);
@@ -58,11 +57,13 @@ $(function(){
       $('.chat-main__message-list').append(html);
       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
       $('form')[0].reset();
-      $('.submit-btn').prop('disabled', false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-  });
-  });
+    })
+    .always(function() {
+      $('.submit-btn').prop('disabled', false);
+    });
 
+  });
 });
