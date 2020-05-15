@@ -3,35 +3,41 @@ $(function(){
       if ( message.image ) {
         var html = 
           `<div class="chat-main__message">
-            <div class="chat-main__message__data-box">
+            <div class="chat-main__message__date-box">
               <div class="chat-main__message__user-name">
                 ${message.user_name}
               </div>
               <div class=""chat-main__message__time>
                 ${message.created_at}
               </div>
+            </div>
               <div class="chat-main__message__comment">
                 <p class="lower-message__content">
                 ${message.content}
                 </p>
               </div>
-              <img class="lower-message__image", src=${message.image} >`
+              <img class="lower-message__image", src=${message.image} >
+              </img>
+           
+          </div>`
         return html;
       }else{
         var html = 
           `<div class="chat-main__message">
-            <div class="chat-main__message__data-box">
+            <div class="chat-main__message__date-box">
               <div class="chat-main__message__user-name">
                 ${message.user_name}
               </div>
-              <div class=""chat-main__message__time>
+              <div class="chat-main__message__time">
                 ${message.created_at}
               </div>
+            </div>
               <div class="chat-main__message__comment">
                 <p class="lower-message__content">
                 ${message.content}
                 </p>
-              </div>`
+              </div>
+          </div>`
         return html;
       };
     }
