@@ -58,7 +58,7 @@ $("#user-search-field").on("keyup", function() {
 });
 
 $(document).on("click", ".chat-group-user__btn--add", function() {
-  console.log
+  
   const userName = $(this).attr("data-user-name");
   const userId = $(this).attr("data-user-id");
   $(this)
