@@ -22,7 +22,7 @@ $(function(){
           </div>`
       }else{
         var html = 
-          `<div class="chat-main__message", data-message-id=${message.id}>
+          `<div class="chat-main__message" data-message-id=${message.id}>
             <div class="chat-main__message__date-box">
               <div class="chat-main__message__user-name">
                 ${message.user_name}
@@ -67,7 +67,7 @@ $(function(){
   });
 
   var reloadMessages = function() {
-    var last_message_id = $('chat-main__message:last').data("message-id");
+    var last_message_id = $('.chat-main__message:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
